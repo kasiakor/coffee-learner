@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://ww.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8">
+		<title>Kasia's Coffee Learner</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="Styles/Layout.css"/>
+		<script src = "scripts/canvasChart.js" type="text/javascript"></script>
+		<script src="scripts/videoPlayer.js"></script>
+		<script src="scripts/createCoffee.js"></script>
+	</head>
+	<body onload="init()">
+		<header id="mainHeader">
+			<div>
+				<div class="headerlogo" href="index.html">
+					<img src="Images/logo.jpg">
+				</div>
+				<span id="headername">Kasia's Coffee Learner</span>
+			</div>
+		</header>
+		<div id="coffeefromkenya">
+			<img src="Images/cofk.jpg">
+		</div>
+		<div id="welcomeimage">
+			<img src="Images/coffeeheader.jpg">
+		</div>
+		<section id="welcometext">
+			<header class="blockheader">Welcome to Kasia's Coffee Learner</header>
+			<span>
+				<p>Hello coffee lovers!</p>
+				<p>Driniking coffee is a part of our life style but! Do you know how to make your favourite coffee? Do you know all the important ingredients and the proportions to create these amazing flavors? I would like to present you a quick way to learn it so <mark>let's start the game!<mark></p>
+			</span>
+		</section>
+		<section id="game"><p>Select from the menu</p>
+			<select id="coffee">
+			  <option value="oneshot">1 x coffee</option>
+			  <option value="twoshot">2 x coffee</option>
+			</select>
+			<select id="milk">
+				<option value="nomilk">0 x milk</option>
+			  <option value="onemilk">1 x milk</option>
+			  <option value="twomilk">2 x milk</option>
+			</select>
+		</section>
+		<section id="budgetcalculator"><p>Calculate your favourite weekly coffee budget</p>
+			<select id="coffeetype">
+			  <option value="cortado">Cortado</option>
+			  <option value="caffelatte">Caffè Latte</option>
+			  <option value="cappuccino">Cappuccino</option>
+			  <option value="espresso">Espresso</option>
+			</select>
+		</section>
+		<section id="allcoffees">
+			<header class="blockheader"><span>The most popular coffees</span>
+			</header>
+			<article class="productarticlewide" data-price="10.00">
+				<img class="productarticlethumbnail" src="Images/cortado.jpg">
+				<div class="productarticlewidecontent">
+					<header>
+						<span class="productarticlewidename"><a name="cortado">Cortado</a></span>
+					</header>
+					<p class="productarticlewidedescription">A cortado is a beverage that consists of espresso coffee mixed with a roughly equal amount of warm milk to reduce the acidity. The word cortado is the past participle of the Spanish verb cortar (to cut), in the sense of "dilute".</p>
+					<p class="productarticlewideprice">£10</p>
+				</div>	
+			</article>
+			<article class="productarticlewide" id="coffee-1" data-price="12.00">
+				<img class="productarticlethumbnail" src="Images/caffelatte.jpg">
+				<div class="productarticlewidecontent">
+					<header>
+						<span class="productarticlewidename"><a name="caffelatte">Caffè Latte</a></span>
+					</header>
+					<p class="productarticlewidedescription">Caffè latte is a coffee-based drink made primarily from espresso and steamed milk. It consists of one-third espresso, two-thirds heated milk and about 1cm of foam. Depending on the skill of the barista, the foam can be poured in such a way to create a picture.</p>
+					<p class="productarticlewideprice">£12</p>
+				</div>	
+			</article>
+			<article class="productarticlewide" id="coffee-1" data-price="14.00">
+				<img class="productarticlethumbnail" src="Images/cappuccino.jpg">
+				<div class="productarticlewidecontent">
+					<header>
+						<span class="productarticlewidename"><a name="cappuccino">Cappuccino</a></span>
+					</header>
+					<p class="productarticlewidedescription">A cappuccino is an Italian coffee drink that is traditionally prepared with double espresso, hot milk, and steamed milk foam. Cream may be used instead of milk and is often topped with cinnamon. It is typically smaller in volume than a caffè latte, with a thicker layer of micro foam.</p>
+					<p class="productarticlewideprice">£14</p>
+				</div>	
+			</article>
+			<article class="productarticlewide" id="coffee-1" data-price="15.00">
+				<img class="productarticlethumbnail" src="Images/espresso.jpg">
+				<div class="productarticlewidecontent">
+					<header>
+						<span class="productarticlewidename"><a name="espresso">Espresso</a></span>
+					</header>
+					<p class="productarticlewidedescription">Espresso a strong coffee prepared by forcing live steam under pressure, or boiling water, through ground dark-roast coffee beans</p>
+					<p class="productarticlewideprice">£15</p>
+				</div>	
+			</article>
+		</section>
+		<section id="bestcoffees">
+			<header class="blockheader">Favourite coffees of my friends</header>
+			<p>I have asked a few of my friends about the coffees they usually buy.<br>The results are presented below:</p>
+	    <div>
+	        <canvas id="can" height="300" width="550">
+	        </canvas>
+	    </div>
+			<section class="coffeebestsellers">
+				<header class="backgroundgradient"></header>
+					<article class="productarticle">
+						<header>
+							<span class="productarticlename"><a href="#cortado">Cortado</a></span>
+						</header>
+					</article>
+					<article class="productarticle">
+						<header>
+							<span class="productarticlename"><a href="#caffelatte">Caffe Latte</a></span>
+						</header>
+					</article>
+					<article class="productarticle">
+						<header>
+							<span class="productarticlename"><a href="#cappuccino">Cappuccino</a></span>
+						</header>
+					</article>
+					<article class="productarticle">
+						<header>
+							<span class="productarticlename"><a href="#espresso">Espresso</a></span>
+						</header>
+					</article>
+			</section>
+		</section>
+		
+		<section class"video">
+			<header class="blockheader">Watch this amazing video from coffee plantations in Columbia!</header>
+			<video width="320" height="240" class="coffeevideoplayer" id="videoplayer" poster="Images/videologo.jpg">
+				<source src="video/movie.mp4" type="video/mp4"/>
+				<source src="video/movie.ogg" type="video/ogg"/>
+				Your browser does not support the video tag.
+			</video>
+			<div id="controls">
+				<button id="playButton">Play</button>
+				<button id="backButton">Back</button>
+				<button id="forwardButton">Forward</button>
+				<button id="muteButton">Mute</button>
+				<br /><br /><br />
+			</div>
+		</section>
+			<script>
+				document.addEventListener("DOMContentLoaded", initializeVideoPlayerControls, false);
+			</script>
+	</body>
+</html>
