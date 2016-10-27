@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('button').click(function() {
+	$('#budgetcalculator button').click(function() {
 		var coffeeType = $('#priceTypeId').val();
 		var coffeeNumber =$('#numberId').val();
 		var result = $('#resultId');

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('button').click(function() {
+	$('#game button').click(function() {
 		var coffee = $('#coffee').val();
 		var milk =$('#milk').val();
 		var result = $('#game-result');
