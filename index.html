@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://ww.w3.org/1999/xhtml">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>Kasia's Coffee Learner</title>
@@ -8,6 +8,8 @@
 		<script src = "scripts/canvasChart.js" type="text/javascript"></script>
 		<script src="scripts/videoPlayer.js"></script>
 		<script src="scripts/createCoffee.js"></script>
+		<script src="scripts/calculateBudget.js"></script>
+
 	</head>
 	<body onload="init()">
 		<header id="mainHeader">
@@ -33,64 +35,70 @@
 		</section>
 		<section id="game"><p>Select from the menu</p>
 			<select id="coffee">
-			  <option value="oneshot">1 x coffee</option>
-			  <option value="twoshot">2 x coffee</option>
+				<option value="1">1 x espresso</option>
+			 	<option value="2">2 x espresso</option>
 			</select>
 			<select id="milk">
-				<option value="nomilk">0 x milk</option>
-			  <option value="onemilk">1 x milk</option>
-			  <option value="twomilk">2 x milk</option>
+				<option value="0">0 x milk</option>
+			 	<option value="1">1 x milk</option>
+			 	<option value="2">2 x milk</option>
 			</select>
+			<button>Create</button>
+			<div class="game-result"></div>
 		</section>
-		<section id="budgetcalculator"><p>Calculate your favourite weekly coffee budget</p>
-			<select id="coffeetype">
-			  <option value="cortado">Cortado</option>
-			  <option value="caffelatte">Caffè Latte</option>
-			  <option value="cappuccino">Cappuccino</option>
-			  <option value="espresso">Espresso</option>
+		<section id="budgetcalculator"><p>Calculate your favourite coffee budget</p>
+			<select id="priceTypeId" name="priceType">
+				<option value="None">Select coffee</option>
+			    <option value="1.95">Cortado</option>
+			    <option value="2.45">Caffe Latte</option>
+			    <option value="2.55">Cappuccino</option>
+			    <option value="1.45">Espresso</option>
 			</select>
+			<input type="text" id="numberId" placeholder="number of coffees" />
+			<button>Submit</button>
+		<input type="text" id="resultId" />
 		</section>
 		<section id="allcoffees">
 			<header class="blockheader"><span>The most popular coffees</span>
 			</header>
-			<article class="productarticlewide" data-price="10.00">
+			<article class="productarticlewide" data-price="1.95">
 				<img class="productarticlethumbnail" src="Images/cortado.jpg">
 				<div class="productarticlewidecontent">
 					<header>
 						<span class="productarticlewidename"><a name="cortado">Cortado</a></span>
 					</header>
 					<p class="productarticlewidedescription">A cortado is a beverage that consists of espresso coffee mixed with a roughly equal amount of warm milk to reduce the acidity. The word cortado is the past participle of the Spanish verb cortar (to cut), in the sense of "dilute".</p>
-					<p class="productarticlewideprice">£10</p>
+					<p class="productarticlewideprice">£1.95</p>
 				</div>	
 			</article>
-			<article class="productarticlewide" id="coffee-1" data-price="12.00">
+			<article class="productarticlewide" id="coffee-1" data-price="2.45">
 				<img class="productarticlethumbnail" src="Images/caffelatte.jpg">
 				<div class="productarticlewidecontent">
 					<header>
 						<span class="productarticlewidename"><a name="caffelatte">Caffè Latte</a></span>
 					</header>
 					<p class="productarticlewidedescription">Caffè latte is a coffee-based drink made primarily from espresso and steamed milk. It consists of one-third espresso, two-thirds heated milk and about 1cm of foam. Depending on the skill of the barista, the foam can be poured in such a way to create a picture.</p>
-					<p class="productarticlewideprice">£12</p>
+					<p class="productarticlewideprice">£2.45</p>
 				</div>	
 			</article>
-			<article class="productarticlewide" id="coffee-1" data-price="14.00">
+			<article class="productarticlewide" id="coffee-1" data-price="2.55">
 				<img class="productarticlethumbnail" src="Images/cappuccino.jpg">
 				<div class="productarticlewidecontent">
 					<header>
 						<span class="productarticlewidename"><a name="cappuccino">Cappuccino</a></span>
 					</header>
 					<p class="productarticlewidedescription">A cappuccino is an Italian coffee drink that is traditionally prepared with double espresso, hot milk, and steamed milk foam. Cream may be used instead of milk and is often topped with cinnamon. It is typically smaller in volume than a caffè latte, with a thicker layer of micro foam.</p>
-					<p class="productarticlewideprice">£14</p>
+					<p class="productarticlewideprice">£2.55</p>
 				</div>	
 			</article>
-			<article class="productarticlewide" id="coffee-1" data-price="15.00">
+			<article class="productarticlewide" id="coffee-1" data-price="1.45">
 				<img class="productarticlethumbnail" src="Images/espresso.jpg">
 				<div class="productarticlewidecontent">
 					<header>
 						<span class="productarticlewidename"><a name="espresso">Espresso</a></span>
 					</header>
 					<p class="productarticlewidedescription">Espresso a strong coffee prepared by forcing live steam under pressure, or boiling water, through ground dark-roast coffee beans</p>
-					<p class="productarticlewideprice">£15</p>
+					<p class="productarticlewideprice">£1.45</p>
 				</div>	
 			</article>
 		</section>
