@@ -14,7 +14,7 @@
             var colHead = 45;
             var rowHead = 25;
             var margin = 8;
-            var header = "Coffee/week"
+            var header = "coffees / week"
             can = document.getElementById("can");
             ctx = can.getContext("2d");
             ctx.fillStyle = "black"
@@ -23,10 +23,10 @@
             ctx.strokeStyle = "rgba(128,128,255, 0.5)"; // light blue line
             ctx.beginPath();
             // print  column header
-            ctx.font = "12pt Helvetica"
-            ctx.fillText(header, 5, colHead - margin);
+            ctx.font = "11pt Helvetica"
+            ctx.fillText(header, 1, colHead - margin);
             // print row header and draw horizontal grid lines
-            ctx.font = "12pt Helvetica"
+            ctx.font = "8pt Helvetica"
             var count =  0;
             for (scale = maxVal; scale >= 0; scale -= stepSize) {
                 y = colHead + (yScalar * count * stepSize);
