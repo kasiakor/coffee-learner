@@ -33,30 +33,20 @@
 				<p>Driniking coffee is a part of our life style but! Do you know how to make your favourite coffee? Do you know all the important ingredients and the proportions to create these amazing flavors? I would like to present you a quick way to learn it so <mark>let's start the game!<mark></p>
 			</span>
 		</section>
-		<section id="game"><p>Select from the menu</p>
+		<div id="select-text"><p>Select from the menu</p></div>
+		<section id="game">
 			<select id="coffee">
 				<option value="1">1 x espresso</option>
 			 	<option value="2">2 x espresso</option>
 			</select>
-		<select id="milk">
+			<select id="milk">
 				<option value="0">0 x milk</option>
 			 	<option value="1">1 x milk</option>
 			 	<option value="2">2 x milk</option>
 			</select>
 			<button>Create</button>
 			<input id="game-result"/>
-		</section>
-		<section id="budgetcalculator"><p>Calculate your favourite coffee budget</p>
-			<select id="priceTypeId" name="priceType">
-				<option value="None">Select coffee</option>
-			    <option value="1.95">Cortado</option>
-			    <option value="2.45">Caffe Latte</option>
-			    <option value="2.55">Cappuccino</option>
-			    <option value="1.45">Espresso</option>
-			</select>
-			<input type="text" id="numberId" placeholder="number of coffees" />
-			<button>Calculate</button>
-		<input type="text" id="resultId" />
+			<div id="coffee-image"></div>
 		</section>
 		<section id="allcoffees">
 			<header class="blockheader"><span>The most popular coffees</span>
@@ -101,6 +91,19 @@
 					<p class="productarticlewideprice">£1.45</p>
 				</div>	
 			</article>
+		</section>
+		<div id="calculate-text"><p>Calculate your favourite coffee budget</p></div>
+		<section id="budgetcalculator">
+			<select id="priceTypeId" name="priceType">
+				<option value="None">Select coffee</option>
+			    <option value="1.95">Cortado</option>
+			    <option value="2.45">Caffe Latte</option>
+			    <option value="2.55">Cappuccino</option>
+			    <option value="1.45">Espresso</option>
+			</select>
+			<input type="text" id="numberId" placeholder="number of coffees" />
+			<button>Calculate</button>
+		<input type="text" id="resultId" />
 		</section>
 		<section id="bestcoffees">
 			<header class="blockheader">Favourite coffees of my friends</header>
