@@ -180,9 +180,18 @@ footer {
 
 /* video */
 
-	.video {
-		margin: 0 auto;
+	#videoplayer {
+		margin: auto;
+		display: block;
 	}
+	#video-header {
+		text-align: center;
+	}
+
+	#controls {
+		text-align: center;
+	}
+
 
   #playButton, #backButton, #forwardButton, #muteButton {
 	cursor: pointer;
@@ -202,17 +211,5 @@ footer {
 	color: #f3f3f3;
 	font-size: 0.8em;
 	width: 76px;
-
+	margin: 2px;
   }
-
-#videoplayer {
-
-	display: block;
-
-}
-
-/* map for findus.html */
-
-#map {
-	margin-top: 20px;
-}
