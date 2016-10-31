@@ -82,6 +82,9 @@ mark {
 }
 
 #game, #budgetcalculator {
+	box-sizing: border-box;
+	padding-top: 25px;
+	position: relative;
 	display: inline-block;
 	background-color: rgba(62,159,62,1);
 	width: 100%;
@@ -103,7 +106,9 @@ button {
 }
 
 #coffee-image {
-    float: right;
+    position: absolute;
+    top:0;
+    right:0;
 }
 
 .productarticle {
