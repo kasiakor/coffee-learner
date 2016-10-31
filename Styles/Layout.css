@@ -213,3 +213,9 @@ footer {
 	width: 76px;
 	margin: 2px;
   }
+
+/* footer */
+
+address {
+	text-align: center;
+}
