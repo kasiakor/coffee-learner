@@ -17,7 +17,7 @@ $(document).ready(function() {
   			 $("#coffee-image").html("<img src='Images/cortado-result.jpg'"+"alt='description' />");		 
   		}
   		else if (coffee === "1" && milk === "2") {
-  			 result.val("Caffe Latte");
+  			 result.val("Caffè Latte");
   			 $("#coffee-image").html("<img src='Images/caffelatte-result.jpg'"+"alt='description' />");
   		}
   		else if (coffee === "2" && milk === "1") {
@@ -25,7 +25,7 @@ $(document).ready(function() {
   			 $("#coffee-image").html("<img src='Images/cappuccino-result.jpg'"+"alt='description' />");
   		}
   		else if (coffee === "2" && milk === "2") {
-  			 result.val("Strong Caffe Latte");
+  			 result.val("Strong Caffè Latte");
   			 $("#coffee-image").html("<img src='Images/caffelatte-result.jpg'"+"alt='description' />");
   		}
   	});
