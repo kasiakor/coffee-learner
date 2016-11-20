@@ -26,8 +26,8 @@ $(document).ready(function() {
 			 coffeeImage.html("<img src='Images/cappuccino-result.jpg' />");
 		}
 		else if (coffee === "2" && milk === "2") {
-			 gameResult.val("Strong Caffè Latte");
-			 coffeeImage.html("<img src='Images/caffelatte-result.jpg' />");
+			 gameResult.val("You've created a new coffee!");
+			 coffeeImage.html("<img src='Images/newcoffee-result.jpg' />");
 		}
 	});
 });
